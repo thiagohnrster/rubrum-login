@@ -1,0 +1,21 @@
+{
+  "name": "tela-login",
+  "version": "1.0.0",
+  "description": "Tela de Login e Registro de Usuário feito em HTML5 e CSS3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thiago Celestino",
+  "license": "ISC",
+  "dependencies": {
+    "fontawesome": "^4.7.2",
+    "jquery": "^3.6.0",
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "grunt": "^1.4.1",
+    "grunt-contrib-copy": "^1.0.0"
+  }
+}
