@@ -410,7 +410,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 	left: 0;
 	z-index: 2;
 	animation: slideout .8s;
-	animation-fill-mode: backwards;
+	animation-fill-mode: forwards;
 }
 
 .content-first-js .first-content .second-column {
