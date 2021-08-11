@@ -13,6 +13,7 @@ html, body {
 }
 
 .container {
+	position: relative;
 	width: 100%;
 	height: 100%;
 	background-color: #F4F4F4;
@@ -401,16 +402,15 @@ input[type="text"], input[type="email"], input[type="password"] {
 
 .content-second-js .content::before {
 	left: 100%;
+	z-index: 2;
 	animation: slidein .8s;
 	animation-fill-mode: forwards;
-	z-index: 2;
 }
 
 .content-first-js .content::before {
 	left: 0;
 	z-index: 2;
 	animation: slideout .8s;
-	animation-fill-mode: forwards;
 }
 
 .content-first-js .first-content .second-column {
