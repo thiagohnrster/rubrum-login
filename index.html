@@ -12,6 +12,12 @@
 </head>
 <body>
 	<div class="container">
+		<!--div class="highlightRoundBox">
+			<span class="loading">
+			<span class="edge edge-left"></span>
+			<span class="edge edge-right"></span>
+			</span>
+		</div--><!-- loading -->
 		<div class="content first-content">
 			<div class="first-column">
 				<svg enable-background="new 0 0 163.2 22.1" version="1.1" viewBox="0 0 163.2 22.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" class="logo-home">
@@ -40,12 +46,12 @@
 				</figure>
 			</div>
 			<div class="second-column">
-				<i class="user-guest fa fa-user-circle-o"></i>
+				<i class="user-guest fa fa-user-circle"></i>
 				<h2 class="title title-second">Acesso Registrado</h2>
 				<div class="text">
 					<p class="description description-second">Sistema de Gerenciamento de Embalagens.</p>
 				</div>
-				<form name="registeredAccessForm" class="form form-login">	
+				<form name="registeredAccessForm" method="POST" class="form form-login">	
 					<label for="usrEmail" class="label-input">
 						<i class="icon-input fa fa-user-circle"></i>
 						<input type="email" placeholder="E-mail" name="usrEmail" id="usrEmail" />
@@ -104,14 +110,14 @@
 				<div class="text">
 					<p class="description description-second">Insira o e-mail cadastrado para redefinir a sua senha.</p>
 				</div>
-				<form name="passwordResetForm" class="form form-password-reset">	
+				<form name="passwordResetForm" method="POST" class="form form-password-reset">	
 					<label for="usrLoginEmail" class="label-input">
 						<i class="icon-input fa fa-envelope"></i>
 						<input type="email" placeholder="E-mail" name="usrLoginEmail" id="usrLoginEmail" />
 					</label>
 					<div class="btn-flex">
 						<button type="submit" class="btn-submit reset-password btn btn-secondary">
-							<span class="btn-txt"><i class="icon-btn fa fa-check"></i>Enviar</span>
+							<span class="btn-txt"><i class="icon-btn fa fa-check"></i><strong>Enviar</strong></span>
 						</button>
 					</div>
 					<a href="javascript:;" id="back" class="back btn btn-hollow">

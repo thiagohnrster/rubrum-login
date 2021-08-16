@@ -6,7 +6,8 @@
 	box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	font-weight: 400;
 	height: 100%;
@@ -41,7 +42,8 @@ html, body {
 	background-color: #004392;
 }
 
-.first-content, .second-content {
+.first-content,
+.second-content {
 	display: flex;
 	overflow: hidden;
 }
@@ -56,7 +58,8 @@ html, body {
 	width: 100%;
 }
 
-.first-column, .second-column {
+.first-column,
+.second-column {
 	display: flex;
 	flex-flow: column;
 	position: relative;
@@ -82,7 +85,10 @@ html, body {
 	width: 60%;
 }
 
-.first-content .first-column, .first-content .second-column, .second-content .first-column, .second-content .second-column {
+.first-content .first-column,
+.first-content .second-column,
+.second-content .first-column,
+.second-content .second-column {
 	transition: all .3s ease-in-out .1s;
 }
 
@@ -104,18 +110,21 @@ html, body {
 	z-index: 2;
 }
 
-.first-content .logo-home, .second-content .logo-home {
+.first-content .logo-home,
+.second-content .logo-home {
 	display: block;
 	width: 215px;
 	height: 30px;
 	margin: 0 auto 50px auto;
 }
 
-.first-content .logo-home path, .first-content .logo-home polygon {
+.first-content .logo-home path,
+.first-content .logo-home polygon {
 	fill: #ffffff;
 }
 
-.second-content .logo-home path, .second-content .logo-home polygon {
+.second-content .logo-home path,
+.second-content .logo-home polygon {
 	fill: #004392;
 }
 
@@ -136,8 +145,8 @@ html, body {
 }
 
 .first-content .second-column .user-guest {
-	font-size: 75px;
-	color: #004392;
+	font-size: 84px;
+	color: #E0E0E0;
 	margin-bottom: 20px;
 }
 
@@ -151,12 +160,13 @@ html, body {
 	font-size: 14px;
 }
 
-.title-primary, .description-primary {
+.title-primary,
+.description-primary {
 	color: #ffffff;
 }
 
 .title-second {
-	color: #004392;
+	color: #000000;
 }
 
 .description-second {
@@ -167,14 +177,16 @@ html, body {
 	margin: 0px 0px 20px 0px;
 }
 
-.back, .forgot-password {
+.back,
+.forgot-password {
 	font-size: 12px;
 	font-weight: 700;
 	text-decoration: none;
 	color: #004392;
 }
 
-.back:hover, .forgot-password:hover {
+.back:hover,
+.forgot-password:hover {
 	color: #4284F4;
 }
 
@@ -196,7 +208,8 @@ html, body {
 	background: #ffffff;
 }
 
-.bottom, .bottom .content-copy {
+.bottom,
+.bottom .content-copy {
 	display: flex;
 }
 
@@ -218,7 +231,7 @@ html, body {
 	margin-left: auto;
 }
 
-.bottom .logo-copy svg path, 
+.bottom .logo-copy svg path,
 .bottom .logo-copy svg polygon {
 	fill: #ACACAC;
 }
@@ -248,30 +261,42 @@ html, body {
 	border: 1px solid #004392;
 }
 
-.label-input, .label-input * {
+.label-input,
+.label-input * {
 	transition: all .2s ease-in-out;
 }
 
-.label-input input[type="text"]::placeholder, 
-.label-input input[type="email"]::placeholder, 
+.label-input input[type="text"]::placeholder,
+.label-input input[type="email"]::placeholder,
 .label-input input[type="password"]::placeholder {
 	color: #004392;
 	opacity: 1;
 }
 
-.label-input:focus-within, .label-input:hover {
+.label-input:focus-within {
 	border-color: #4284F4;
 	background-color: #F4F4F4;
 }
 
-.label-input:focus-within .icon-input, 
-.label-input:focus-within input[type="text"]::placeholder, 
-.label-input:focus-within input[type="email"]::placeholder, 
-.label-input:focus-within input[type="password"]::placeholder, 
-.label-input:hover .icon-input, 
-.label-input:hover input[type="text"]::placeholder, 
-.label-input:hover input[type="email"]::placeholder, 
+.label-input:hover {
+	border-color: #4284F4;
+	background-color: #F4F4F4;
+}
+
+.label-input:focus-within .icon-input,
+.label-input:focus-within input[type="text"]::placeholder,
+.label-input:focus-within input[type="email"]::placeholder,
+.label-input:focus-within input[type="password"]::placeholder {
+	color: #4284F4;
+}
+
+.label-input:hover input[type="text"]::placeholder,
+.label-input:hover input[type="email"]::placeholder,
 .label-input:hover input[type="password"]::placeholder {
+	color: #4284F4;
+}
+
+.label-input:hover .icon-input {
 	color: #4284F4;
 }
 
@@ -284,16 +309,25 @@ html, body {
 	margin-left: 10px;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	width: 100%;
 	border: none;
 	height: 33px;
+	appearance: none;
 	outline: none;
 	padding: 5px 10px;
 	background: none;
+}
+
+input[type="text"]::-ms-clear,
+input[type="email"]::-ms-clear,
+input[type="password"]::-ms-reveal {
+	display: none;
 }
 
 .btn-flex {
@@ -311,7 +345,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 	align-items: center;
 	text-decoration: none;
 	border: none;
-	height: 35px;
+	height: 38px;
 	padding: 10px 50px;
 	border-radius: 60px;
 	background: none;
@@ -355,6 +389,39 @@ input[type="text"], input[type="email"], input[type="password"] {
 	background: none;
 }
 
+.btn-hollow.disabled {
+	cursor: default;
+	pointer-events: none;
+}
+
+.btn-hollow.disabled,
+.btn-hollow.disabled .icon-btn {
+	color: #ACACAC;
+}
+
+.btn:disabled {
+	cursor: default;
+	pointer-events: none;
+	border-color: #ACACAC;
+	background: #ACACAC;
+}
+
+.reset-password:disabled,
+.back.disabled,
+.back.disabled .icon-btn {
+	opacity: 0.50;
+}
+
+.reset-password:disabled {
+	border-color: #004392;
+	background: #004392;
+}
+
+.back.disabled,
+.back.disabled .icon-btn {
+	color: #004392;
+}
+
 .icon-btn {
 	font-size: 16px;
 	margin-right: 10px;
@@ -379,12 +446,16 @@ input[type="text"], input[type="email"], input[type="password"] {
 	transition: none;
 }
 
-.content-second-js .first-content .first-column, .content-second-js .first-content .second-column {
+.content-second-js .first-content .first-column,
+.content-second-js .first-content .second-column,
+.content-third-js .first-content .first-column,
+.content-third-js .first-content .second-column {
 	z-index: -1;
 	opacity: 0;
 }
 
-.content-second-js .first-content .second-column {
+.content-second-js .first-content .second-column,
+.content-third-js .first-content .second-column {
 	animation: slidedownfade .8s;
 	animation-timing-function: ease-in-out;
 }
@@ -400,7 +471,8 @@ input[type="text"], input[type="email"], input[type="password"] {
 	opacity: 1;
 }
 
-.content-second-js .content::before {
+.content-second-js .content::before,
+.content-third-js .content::before {
 	left: 100%;
 	z-index: 2;
 	animation: slidein .8s;
@@ -427,7 +499,10 @@ input[type="text"], input[type="email"], input[type="password"] {
 	animation-timing-function: ease-in-out;
 }
 
-.content-first-js .second-content .first-column, .content-first-js .second-content .second-column {
+.content-first-js .second-content .first-column,
+.content-first-js .second-content .second-column,
+.content-third-js .first-content .first-column,
+.content-third-js .first-content .second-column {
 	z-index: -1;
 }
 
@@ -441,7 +516,8 @@ input[type="text"], input[type="email"], input[type="password"] {
 	animation-timing-function: ease-in-out;
 }
 
-.content-second-js .first-content .first-column .featured-home {
+.content-second-js .first-content .first-column .featured-home,
+.content-third-js .first-content .first-column .featured-home {
 	animation: zoomout .2s;
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in-out;
@@ -455,7 +531,9 @@ input[type="text"], input[type="email"], input[type="password"] {
 	transform: scale(1);
 }
 
-.content-second-js .first-content .second-column .bottom {
+.content-second-js .first-content .second-column .bottom,
+.content-third-js .first-content .second-column .bottom,
+.content-third-js .second-content .bottom {
 	opacity: 0;
 }
 
@@ -467,22 +545,126 @@ input[type="text"], input[type="email"], input[type="password"] {
 	opacity: 0;
 }
 
+.content-third-js .highlightRoundBox {
+	animation: summon .2s .8s;
+	animation-fill-mode: forwards;
+}
+
+/* Loading */
+.highlightRoundBox {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	visibility: hidden;
+}
+
+.highlightRoundBox::before {
+	display: block;
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	z-index: 6;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	background: #FFFFFF;
+}
+
+.loading {
+	display: block;
+	position: relative;
+	border-radius: 100px;
+	z-index: 7;
+	width: 70px;
+	height: 70px;
+	border: 0.5rem solid transparent;
+	border-top-color: #004392;
+	border-left: 8px solid #004392;
+	border-radius: 70px;
+	border-right: 8px solid #004392;
+	transform: rotate(0deg);
+	animation: spin 1s infinite linear;
+}
+
+.loading .edge {
+	display: block;
+	position: absolute;
+	border-radius: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: #004392;
+}
+
+.loading .edge.edge-left {
+	top: 2.842rem;
+	left: 0.095rem;
+}
+
+.loading .edge.edge-right {
+	top: 2.842rem;
+	right: 0.095rem;
+}
+
+@-webkit-keyframes zoomin {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+
+}
+
 @keyframes zoomin {
 	from {
 		transform: scale(0);
 	}
+
 	to {
-		transform: scale(1);	
+		transform: scale(1);
 	}
+
+}
+
+@-webkit-keyframes zoomout {
+	from {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(0);
+	}
+
 }
 
 @keyframes zoomout {
 	from {
 		transform: scale(1);
 	}
+
 	to {
 		transform: scale(0);
 	}
+
+}
+
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+
 }
 
 @keyframes fadein {
@@ -493,6 +675,18 @@ input[type="text"], input[type="email"], input[type="password"] {
 	to {
 		opacity: 1;
 	}
+
+}
+
+@-webkit-keyframes fadeout {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+
 }
 
 @keyframes fadeout {
@@ -503,6 +697,25 @@ input[type="text"], input[type="email"], input[type="password"] {
 	to {
 		opacity: 0;
 	}
+
+}
+
+@-webkit-keyframes slidein {
+	from {
+		left: 0;
+		width: 40%;
+	}
+
+	50% {
+		left: 20%;
+		width: 80%;
+	}
+
+	to {
+		left: 100%;
+		width: 40%;
+	}
+
 }
 
 @keyframes slidein {
@@ -520,6 +733,25 @@ input[type="text"], input[type="email"], input[type="password"] {
 		left: 100%;
 		width: 40%;
 	}
+
+}
+
+@-webkit-keyframes slideout {
+	from {
+		left: 100%;
+		width: 40%;
+	}
+
+	50% {
+		left: 20%;
+		width: 80%;
+	}
+
+	to {
+		left: 0;
+		width: 40%;
+	}
+
 }
 
 @keyframes slideout {
@@ -537,6 +769,24 @@ input[type="text"], input[type="email"], input[type="password"] {
 		left: 0;
 		width: 40%;
 	}
+
+}
+
+@-webkit-keyframes slidedownfade {
+	from {
+		top: 0;
+		opacity: 1;
+	}
+
+	10% {
+		opacity: 0;
+	}
+
+	to {
+		top: 100%;
+		opacity: 0;
+	}
+
 }
 
 @keyframes slidedownfade {
@@ -553,6 +803,24 @@ input[type="text"], input[type="email"], input[type="password"] {
 		top: 100%;
 		opacity: 0;
 	}
+
+}
+
+@-webkit-keyframes slideupfade {
+	from {
+		top: 100%;
+		opacity: 0;
+	}
+
+	90% {
+		opacity: 0;
+	}
+
+	to {
+		top: 0;
+		opacity: 1;
+	}
+
 }
 
 @keyframes slideupfade {
@@ -569,6 +837,26 @@ input[type="text"], input[type="email"], input[type="password"] {
 		top: 0;
 		opacity: 1;
 	}
+
+}
+
+@-webkit-keyframes nono {
+	from {
+		transform: translateX(0);
+	}
+
+	35% {
+		transform: translateX(-15%);
+	}
+
+	70% {
+		transform: translateX(15%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+
 }
 
 @keyframes nono {
@@ -587,4 +875,54 @@ input[type="text"], input[type="email"], input[type="password"] {
 	to {
 		transform: translateX(0);
 	}
+
+}
+
+@-webkit-keyframes summon {
+	from {
+		z-index: -1;
+		visibility: hidden;
+	}
+
+	to {
+		z-index: 6;
+		visibility: visible;
+	}
+
+}
+
+@keyframes summon {
+	from {
+		z-index: -1;
+		visibility: hidden;
+	}
+
+	to {
+		z-index: 6;
+		visibility: visible;
+	}
+
+}
+
+/* Loading animation */
+@-webkit-keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+
 }

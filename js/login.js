@@ -27,8 +27,14 @@ document.addEventListener("DOMContentLoaded", function() {
             return false;
         }
 
+        errorDOM.textContent = "";
+            
+        document.querySelector("label[for='usrEmail']").classList.remove("has-error");
         document.querySelector("label[for='pwdSenha']").classList.remove("has-error");
-
+        //document.querySelector("body").className = "content-third-js";
+        //setTimeout(function () {
+        //    formLogin.submit();
+        //}, 3000);
         formLogin.submit();
     }
 
@@ -43,9 +49,17 @@ document.addEventListener("DOMContentLoaded", function() {
             return false;
         }
 
+        errorDOM.textContent = "";
+        
         document.querySelector("label[for='usrLoginEmail']").classList.remove("has-error");
-
-        formLogin.submit();
+        document.querySelector(".reset-password .btn-txt strong").textContent = "Enviando";
+        document.querySelector(".reset-password").disabled = true;
+        document.querySelector(".reset-password .icon-btn").className += "fa fa-circle-o-notch fa-spin";
+        document.querySelector(".back").classList.add("disabled");
+        
+        setTimeout(function () {
+            formPasswordReset.submit();
+        }, 3000);
     }
 
     for (var i = 0; i < btnSubmit.length; i++) {
