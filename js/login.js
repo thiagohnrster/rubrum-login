@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var formLogin = document.querySelector(".form-login");
-    var formPasswordReset = document.querySelector(".form-password-reset");
+    var formPwdForgot = document.querySelector(".form-password-forgot");
     var emailRegex = /^([a-z0-9_\.\-])+\@(([a-z0-9\-])+\.)+([a-z0-9]{2,4})+$/;
     var errorDOM = document.createElement('span');
     var btnSubmit = document.querySelectorAll('.btn-submit');
@@ -31,16 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
             
         document.querySelector("label[for='usrEmail']").classList.remove("has-error");
         document.querySelector("label[for='pwdSenha']").classList.remove("has-error");
-        //document.querySelector("body").className = "content-third-js";
-        //setTimeout(function () {
-        //    formLogin.submit();
-        //}, 3000);
+        
         formLogin.submit();
     }
 
-    function formPwdResetValidate() {
+    function formPwdForgotValidate() {
         if (document.getElementById("usrLoginEmail").value === "" || !emailRegex.test(document.getElementById("usrLoginEmail").value)) {
-            formPasswordReset.classList.add("validate-error");
+            formPwdForgot.classList.add("validate-error");
             document.querySelector("label[for='usrLoginEmail']").appendChild(errorDOM);
             errorDOM.textContent = "Verifique o preenchimento do campo.";
             document.querySelector("label[for='usrLoginEmail']").classList.add("has-error");
@@ -58,10 +55,10 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".back").classList.add("disabled");
         
         setTimeout(function () {
-            formPasswordReset.submit();
+            formPwdForgot.submit();
         }, 3000);
     }
-
+    
     for (var i = 0; i < btnSubmit.length; i++) {
         btnSubmit[i].addEventListener('click', function(event) {
             event.preventDefault();
@@ -71,12 +68,12 @@ document.addEventListener("DOMContentLoaded", function() {
             document.addEventListener("animationend", function(event) {
                 if (event.animationName === "nono") {
                     formLogin.classList.remove("validate-error");
-                    formPasswordReset.classList.remove("validate-error");
+                    formPwdForgot.classList.remove("validate-error");
                 }
             });
         });
     }
 
     document.querySelector(".sign-in").addEventListener("click", formLoginValidate);
-    document.querySelector(".reset-password").addEventListener("click", formPwdResetValidate);
+    document.querySelector(".reset-password").addEventListener("click", formPwdForgotValidate);
 });
