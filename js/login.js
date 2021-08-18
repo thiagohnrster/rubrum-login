@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".reset-password .btn-txt strong").textContent = "Enviando";
         document.querySelector(".reset-password").disabled = true;
         document.querySelector(".reset-password .icon-btn").className += "fa fa-circle-o-notch fa-spin";
-        document.querySelector(".back").classList.add("disabled");
         
         setTimeout(function () {
             formPwdForgot.submit();
