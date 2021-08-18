@@ -22,7 +22,6 @@ body {
 
 .content {
 	display: flex;
-	/*align-items: center;*/
 	justify-content: space-between;
 	min-width: 960px;
 	min-height: 768px;
@@ -49,6 +48,7 @@ body {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
+	padding: 0px 45px;
 }
 
 .pull-up {
@@ -85,8 +85,6 @@ body {
 	flex-flow: column;
 	position: relative;
 	align-items: center;
-	/*justify-content: center;*/
-	/*height: 100%;*/
 }
 
 .second-column {
@@ -152,20 +150,32 @@ body {
 	fill: #004392;
 }
 
-.first-content .first-column .featured-home {
+.first-content .first-column .featured-home,
+.second-content .first-column .featured-home {
 	position: relative;
 	flex: none;
 	min-width: 180px;
 	width: 30%;
-	margin-top: 60px;
 	opacity: 1;
 	transform: scale(1);
 	transition: all .2s ease-in-out;
 }
 
-.first-content .first-column .featured-home img {
+.first-content .first-column .featured-home img,
+.second-content .first-column .featured-home img {
 	width: 100%;
 	height: auto;
+}
+
+.first-content .first-column .featured-home {
+	margin-top: 60px;
+}
+
+.second-content .first-column .featured-home.sign-in {
+	min-width: 160px;
+	width: 20%;
+	margin-top: 10px;
+	margin-bottom: 50px;
 }
 
 .first-content .second-column .user-guest {
@@ -499,9 +509,13 @@ input[type="password"]::-ms-reveal {
 	opacity: 1;
 }
 
-.content-second-js .content::before,
-.content-third-js .content::before {
-	left: 100%;
+.content-second-js .second-content .first-column .logo-home path,
+.content-second-js .second-content .first-column .logo-home polygon {
+	fill: #ffffff;
+} 
+
+.content-second-js .content::before {
+	left: 60%;
 	z-index: 2;
 	animation: slidein .8s;
 	animation-fill-mode: forwards;
@@ -512,6 +526,10 @@ input[type="password"]::-ms-reveal {
 	z-index: 2;
 	animation: slideout .8s;
 	animation-fill-mode: forwards;
+}
+
+.content-third-js .content::before {
+	left: 100%;
 }
 
 .content-first-js .first-content .second-column {
@@ -544,6 +562,11 @@ input[type="password"]::-ms-reveal {
 	animation-timing-function: ease-in-out;
 }
 
+.content-second-js .second-content .first-column {
+	animation: fadein .8s;
+	animation-timing-function: ease-in-out;
+}
+
 .content-second-js .first-content .first-column .featured-home,
 .content-third-js .first-content .first-column .featured-home {
 	animation: zoomout .2s;
@@ -552,7 +575,21 @@ input[type="password"]::-ms-reveal {
 	transform: scale(0);
 }
 
+.content-first-js .second-content .first-column .sign-in {
+	animation: zoomout .2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+	transform: scale(0);
+}
+
 .content-first-js .first-content .first-column .featured-home {
+	animation: zoomin .2s .4s;
+	animation-fill-mode: backwards;
+	animation-timing-function: ease-in-out;
+	transform: scale(1);
+}
+
+.content-second-js .second-content .first-column .sign-in {
 	animation: zoomin .2s .4s;
 	animation-fill-mode: backwards;
 	animation-timing-function: ease-in-out;
@@ -740,7 +777,7 @@ input[type="password"]::-ms-reveal {
 	}
 
 	to {
-		left: 100%;
+		left: 60%;
 		width: 40%;
 	}
 
@@ -758,7 +795,7 @@ input[type="password"]::-ms-reveal {
 	}
 
 	to {
-		left: 100%;
+		left: 60%;
 		width: 40%;
 	}
 
@@ -766,7 +803,7 @@ input[type="password"]::-ms-reveal {
 
 @-webkit-keyframes slideout {
 	from {
-		left: 100%;
+		left: 60%;
 		width: 40%;
 	}
 
@@ -784,7 +821,7 @@ input[type="password"]::-ms-reveal {
 
 @keyframes slideout {
 	from {
-		left: 100%;
+		left: 60%;
 		width: 40%;
 	}
 

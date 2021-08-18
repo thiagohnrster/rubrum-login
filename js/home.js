@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var btnForgot = document.querySelector("#pwdForgot");
-    var btnBack = document.querySelector("#back");
+    var btnEnter = document.querySelector("#enter");
     var body = document.querySelector("body");
 
     btnForgot.addEventListener("click", function() {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    btnBack.addEventListener("click", function() {
+    btnEnter.addEventListener("click", function() {
         document.querySelector("label[for='usrLoginEmail']").classList.remove("has-error");
         document.getElementById("usrLoginEmail").value = "";
 
