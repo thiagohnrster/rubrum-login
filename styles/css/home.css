@@ -135,7 +135,7 @@ body {
 	display: block;
 	width: 215px;
 	height: 30px;
-	margin: 0 auto 50px auto;
+	margin: 0 auto 84px auto;
 }
 
 .first-content .logo-home path,
@@ -168,13 +168,13 @@ body {
 }
 
 .first-content .first-column .featured-home {
-	margin-top: 60px;
+	margin-top: 88px;
 }
 
 .second-content .first-column .featured-home.sign-in {
 	min-width: 160px;
 	width: 20%;
-	margin-top: 10px;
+	margin-top: 5px;
 	margin-bottom: 50px;
 }
 
@@ -189,8 +189,9 @@ body {
 }
 
 .title {
-	font-size: 34px;
+	font-size: 24px;
 	font-weight: 700;
+	line-height: 1.25;
 	margin-bottom: 20px;
 }
 
